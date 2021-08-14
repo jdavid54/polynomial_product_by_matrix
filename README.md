@@ -7,7 +7,7 @@ Let b(x) a polynomial with n coefficients B = [b0, b1, b2, ..........., bn-2, bn
 let m >= n 
 
 
-To get the product a(x).b(x) with degr_max m+n-2, we have to create a matrix M (degre_max, n) as below :
+To get the product a(x).b(x) with degr_max m+n-2, we have to create a matrix M (degre_max, n) and a column vector of B as below :
 
 
 |Matrix M|     0|  1|  2|  3| .............| n-1| +++++++ |B=coeff. bn in column|
