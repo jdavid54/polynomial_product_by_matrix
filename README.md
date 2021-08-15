@@ -1,16 +1,21 @@
 # polynomial_product_by_matrix
 
-Let a(x) a polynomial with m coefficients A = [a0, a1, a2, ..........., am-2, am-1], degree m-1
+Let a(x) a polynomial with m coefficients A = [a0, a1, a2, ..........., am-2, am-1], size m, degree deg1 = m-1
 
-Let b(x) a polynomial with n coefficients B = [b0, b1, b2, ..........., bn-2, bn-1], degree n-1,
+Let b(x) a polynomial with n coefficients B = [b0, b1, b2, ..........., bn-2, bn-1], size n, degree deg2 = n-1,
 
 let m >= n 
 
+We have degree_max = deg1 + deg2 which give the numbers of rows of the matrix M.
 
-To get the product a(x).b(x) with degr_max m+n-2, we have to create a matrix M (degre_max, n) and a column vector of B as below :
+From row m of the matrix, we add zeros to A to fit for degree exceeding (degree_max - deg1) 
+
+To get the product a(x).b(x) with degree_max=m+n, we have to create a matrix M with shape (degree_max, n) 
+
+On the right, I show a column vector with n coeeficients of B.
 
 
-|Matrix M|     0|  1|  2|  3| .............| n-1| +++++++ |B=coeff. bn in column|
+|Matrix M|     0|  1|  2|  3| .............| n-1| dot |B|
 |-----|:------:|------:| ------:|------:|------:|------:|---:|---:|
 |**0**|     a0|  0|  0|  0| .............| 0|   |b0|
 |**1**|     a1|  a0|  0|  0| .............| 0| |b1|
