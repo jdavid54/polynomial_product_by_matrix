@@ -2,15 +2,17 @@
 
 Let a(x) a polynomial with m coefficients A = [a0, a1, a2, ..........., am-2, am-1], size m, degree deg1 = m-1
 
-Let b(x) a polynomial with n coefficients B = [b0, b1, b2, ..........., bn-2, bn-1], size n, degree deg2 = n-1,
+Let b(x) a polynomial with n coefficients B = [b0, b1, b2, ..........., bn-2, bn-1], size n, degree deg2 = n-1
 
-let m >= n 
+Assuming m >= n, we swap A, B in the function if not !
 
-We have degree_max = deg1 + deg2 which give the numbers of rows of the matrix M.
+The product will have degrree_max = deg1 + deg2 which give the numbers of rows of the matrix M.
 
-From row m of the matrix, we add zeros to A to fit for degree exceeding (degree_max - deg1) 
+The number of columns of this matrix is equal to deg2.
 
-To get the product a(x).b(x) with degree_max=m+n, we have to create a matrix M with shape (degree_max, n) 
+From row m of the matrix, we add zeros to A to fit f with all degrees exceeding : degree_max - deg1
+
+To get the product a(x).b(x), we have to create a matrix M with shape (degree_max, deg2) 
 
 On the right, I show a column vector with n coeeficients of B.
 
