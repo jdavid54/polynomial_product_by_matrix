@@ -6,7 +6,7 @@ Let b(x) a polynomial with n coefficients B = [b0, b1, b2, ..........., bn-2, bn
 
 Assuming m >= n, we swap A, B in the function if not !
 
-The product will have degrree_max = deg1 + deg2 which give the numbers of rows of the matrix M.
+The product will have degree_max = deg1 + deg2 which give the numbers of rows of the matrix M.
 
 From row m of the matrix, we have to add zeros to A (A extended) to fit with all degrees exceeding deg1.
 
