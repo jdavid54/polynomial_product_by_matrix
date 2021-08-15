@@ -5,8 +5,8 @@ def rotate(l, n):
 
 def polymul_bymatrix(P1, P2):
     # get rid of zero end trail
-    #P1 =  np.trim_zeros(P1, trim='b')
-    #P2 =  np.trim_zeros(P2, trim='b')
+    P1 =  np.trim_zeros(P1, trim='b')
+    P2 =  np.trim_zeros(P2, trim='b')
     m = len(P1)
     n = len(P2)
     deg1 = m-1
@@ -17,7 +17,7 @@ def polymul_bymatrix(P1, P2):
         P1,P2 = P2,P1 # swap
         m=len(P1)
         n=len(P2)
-    P1.extend([0]*(n-1))
+    P1.extend([0]*(deg2))
     print('\nP1\n',P1)
     # create the matrix M with the rotating coefficients of P1
     M = []
@@ -42,6 +42,6 @@ matrix, b, c = polymul_bymatrix(A, C)
 print('Result',c)
 
 A = [1,-5,3]
-B = [0,1]
+B = [1,-1]
 matrix, b, c = polymul_bymatrix(A, B)
 print('Result',c)
