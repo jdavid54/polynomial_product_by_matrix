@@ -8,11 +8,11 @@ Assuming m >= n, we swap A, B in the function if not !
 
 The product will have degrree_max = deg1 + deg2 which give the numbers of rows of the matrix M.
 
-The number of columns of this matrix is equal to deg2.
+From row m of the matrix, we have to add zeros to A (A extended) to fit with all degrees exceeding deg1.
 
-From row m of the matrix, we add zeros to A to fit f with all degrees exceeding : degree_max - deg1
+As the number of columns of this matrix is equal to deg2, each column will contain A extended with a rotation by one for the next one.
 
-To get the product a(x).b(x), we have to create a matrix M with shape (degree_max, deg2) 
+To get the product a(x).b(x), we have to create a matrix M with shape (degree_max, deg2). 
 
 On the right, I show a column vector with n coeeficients of B.
 
@@ -35,5 +35,6 @@ On the right, I show a column vector with n coeeficients of B.
 |**m+n-2**|     0|  0|  0|  0| .............| am-2| 
 |**m+n-1**|  0|   0|    0|  0| .......... |am-1|
 
+*Note that this matrix is composed by 2 triangular matrices.*
 
-Then the dot product of M.B will give the coefficients of the polynomial product of a(x) and b(x) !
+The dot product of M.B will give the coefficients of the polynomial product of a(x) and b(x) !
